@@ -1,33 +1,89 @@
- /* button{
-        padding: 10%;
-        text-align: center;
-        margin: auto;
-        background-color: #864AF9;
-        color: #332941;
-        border: 20%;
-        border-radius: 20%;
-        height: 4rem;
-       
-    } */
-    /* button:hover{
-        background-color: #7FC7D9;
-        color: #DCF2F1;
-    } */
-    nav{
-        display: flex;
-        justify-content: center;
-        gap: 10%;
-        padding: 2%;
-    }
-    nav>div{
-        display: flex;
-        justify-content: center;
-        gap: 10%;
-    }
-    #heading{
-        text-align: center;
-        padding: 2%;
-    }
-   main{
-    color: aliceblue;
-   }
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4fd, #e0ecf8, #c2d7f0);
+    color: #333;
+}
+
+/* Header Gradient */
+.bg-gradient {
+    background: linear-gradient(135deg, #4e9fd1, #66b3ff); /* Light blue gradient for better contrast */
+    position: relative; /* Ensure proper stacking context */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Text Styling for Heading */
+#heading {
+    font-size: 2.5rem;
+    color: #ffffff; /* Set text color to white to contrast with the background */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Add text shadow to enhance visibility */
+    position: relative;
+    z-index: 1; /* Ensure the text is above the overlay */
+}
+
+/* Optional: Adding an overlay to enhance contrast */
+.bg-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Darker overlay for contrast */
+    z-index: 0; /* Ensure overlay is behind the text */
+}
+
+/* Navbar Styling */
+.navbar-dark .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.navbar-dark .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+}
+.navbar-dark .nav-link:hover {
+    color: white;
+}
+
+/* Main Section */
+main {
+    color: #333;
+}
+
+/* Cards Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.card-body {
+    padding: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #0084cc);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #aaa;
+}
+footer p {
+    margin: 0;
+}

@@ -1,88 +1,183 @@
-body{
-    /* background-image: url(https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704931200&semt=ais); */
-    background-repeat: no-repeat;
-   background-color: black;
-   background-size: cover; 
-   background-position: center;
-}
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4fd, #e0ecf8, #c2d7f0); /* Soft light blue gradient */
+    color: #333; /* Standard dark text for readability */
 }
 
-nav>div {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-   
-}
-
-#heading {
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #007bff, #00c6ff); /* Blue gradient for header */
+    padding: 20px;
     text-align: center;
-    padding: 2%;
     color: white;
 }
 
-#container {
-    width: max-content;
-
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-.note {
-    width: 80%;
-    margin: 5%;
-    border: 5px solid black;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.card {
-    width: 50%;
-    margin-top: 10%;
-    margin-left: 25%;
-    margin-right: 25%;
-    border: 12px solid black;
-    padding: 10px;
+/* Navbar Styling */
+#top-nav {
     text-align: center;
-    /* border-style: dashed; */
-    /* box-shadow: rgba(8, 149, 188, 0.3) 0px 0px 0px 3px; */
-     box-shadow: turquoise 0px 0px 0px 3px; 
+    padding: 10px 0;
 }
 
-#main {
-    padding: 10px;
-}
-button{
-    border-radius: 10%;
-    padding: 20%;
-    margin: 2%;
-}
-
-#top a{
-    padding: 5%;
-    text-align: center;
-    font-size: large;
-    text-decoration-line: none;
+#top-nav a {
+    margin: 0 15px;
     text-decoration: none;
-    color: tomato;
-    border: 2px solid turquoise;
-    border-style: dashed;
+    color: #fff;
+    font-size: 1.1rem;
 }
-#bottom {
-    display: flex;
-    justify-content: center;
+
+#top-nav a:hover {
+    color: #ffd700; /* Golden hover color */
 }
-#bottom button{
-    padding: 1%;
-    background-color: black;
-    box-shadow: turquoise 0px 0px 0px 3px; 
+
+/* Main Section */
+#main {
+    padding: 30px;
+    text-align: center;
+    background: #fff;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.card-text{
-    font-size: 1.5rem;
+
+/* Cards Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Slightly darker shadow on hover */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #00c6ff); /* Blue gradient background */
+    border: none;
+    padding: 12px 25px; /* Larger padding for a more prominent button */
+    border-radius: 30px;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #0084cc); /* Darker blue gradient on hover */
+}
+
+footer {
+    background: #222; /* Dark background for the footer */
+    color: #aaa; /* Light gray text */
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background: #007bff;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-header .btn-close {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.modal-body input, .modal-body textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.modal-body input:focus, .modal-body textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.modal-footer {
+    border-top: 1px solid #ddd;
+    padding: 15px;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #bbb;
+    border-color: #bbb;
+}
+
+.modal-footer .btn-primary {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.modal-footer .btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #0084cc);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    
+    #top-nav {
+        padding: 15px 0;
+    }
+
+    #top-nav a {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
 }
